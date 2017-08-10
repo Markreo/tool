@@ -5,30 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:tool"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded" WindowState="Maximized">
+        Title="MainWindow" Height="350" Width="1525" Loaded="Window_Loaded" WindowState="Maximized">
     <Grid>
         <GroupBox x:Name="groupBox1" Header="Menu" VerticalAlignment="Top" Height="64">
             <Grid>
-                <Button x:Name="btnLoadPoint" Content="Load Point" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="btnLoadPoint_Click"/>
-                <Label x:Name="label" Content="Point:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="121,7,0,0"/>
-                <ComboBox x:Name="cbPoints" HorizontalAlignment="Left" Margin="161,10,0,0" VerticalAlignment="Top" Width="95" ItemsSource="{Binding _listPoint}" SelectedValuePath="name" DisplayMemberPath="name" SelectionChanged="cbPoints_SelectionChanged"/>
-                <Label x:Name="label1" Content="X:" HorizontalAlignment="Left" Margin="293,7,0,0" VerticalAlignment="Top"/>
-                <TextBox x:Name="txtX" HorizontalAlignment="Left" Height="23" Margin="313,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                <Label x:Name="label1_Copy" Content="Y:" HorizontalAlignment="Left" Margin="448,8,0,0" VerticalAlignment="Top"/>
-                <TextBox x:Name="txtY" HorizontalAlignment="Left" Height="23" Margin="468,11,-83,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                <Button x:Name="btnDel" Content="del" HorizontalAlignment="Left" Margin="607,14,-126,0" VerticalAlignment="Top" Width="24" Click="btnDel_Click"/>
-                <CheckBox x:Name="cNewPoint" Content="new Point" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="678,15,-244,0"/>
+                <Button x:Name="btnLoadPoint" Content="Load Point" HorizontalAlignment="Left" Margin="101,10,0,0" VerticalAlignment="Top" Width="75" Click="btnLoadPoint_Click"/>
+                <Label x:Name="label" Content="Point:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="198,7,0,0"/>
+                <ComboBox x:Name="cbPoints" HorizontalAlignment="Left" Margin="238,10,0,0" VerticalAlignment="Top" Width="187" ItemsSource="{Binding _listPoint}" SelectedValuePath="name" DisplayMemberPath="name" SelectionChanged="cbPoints_SelectionChanged"/>
+                <Label x:Name="label1" Content="X:" HorizontalAlignment="Left" Margin="632,7,0,3" Width="24"/>
+                <TextBox x:Name="txtX" HorizontalAlignment="Left" Margin="661,11,0,9" TextWrapping="Wrap" Text="TextBox" Width="94" KeyDown="txtX_KeyDown"/>
+                <Label x:Name="label1_Copy" Content="Y:" HorizontalAlignment="Left" Margin="771,7,0,3"/>
+                <TextBox x:Name="txtY" HorizontalAlignment="Left" Margin="795,11,0,9" TextWrapping="Wrap" Text="TextBox" Width="94" KeyDown="txtX_KeyDown"/>
+                <Button x:Name="btnDel" Content="del" HorizontalAlignment="Left" Margin="898,11,0,9" Width="24" Click="btnDel_Click"/>
+                <CheckBox x:Name="cNewPoint" Content="new Point" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="943,15,0,0"/>
+                <CheckBox x:Name="cRelative" Content="relative" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1040,15,0,0" Checked="cRelative_Checked" Unchecked="cRelative_Unchecked"/>
+                <!--<Label x:Name="label2" Content="" HorizontalAlignment="Left" Margin="889,12,-963,0" VerticalAlignment="Top" Width="579"/>-->
+                <Button x:Name="btnLocation" Content="Maxtrix Location" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="93" Click="btnLocation_Click"/>
+                <Button x:Name="btnIn" Content="+" Margin="0,10,114,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="17" Click="btnIn_Click"/>
+                <Button x:Name="btnOut" Content="-" Margin="0,10,136,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="17" Click="btnOut_Click"/>
+                <Label x:Name="lRatio" Content="100%" HorizontalAlignment="Right" Margin="0,7,158,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="444,11,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="176" KeyDown="txtName_KeyDown"/>
+                <Button x:Name="btnLoadMaxtrix" Content="Load Maxtrix" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="btnLoadMaxtrix_Click"/>
+
 
 
             </Grid>
         </GroupBox>
 
-        <GroupBox x:Name="groupBox" Header="Image" Margin="0,67,0,0">
-            <ScrollViewer HorizontalScrollBarVisibility="Visible">
-                <Canvas x:Name="imgMap" Margin="0" MouseMove="imgMap_MouseMove" MouseLeave="imgMap_MouseLeave" MouseDown="imgMap_MouseDown"/>
+        <GroupBox x:Name="groupBox" Header="Image" Margin="0,67,0,0" KeyDown="groupBox_KeyDown" KeyUp="groupBox_KeyUp">
+            <ScrollViewer x:Name="scroll" HorizontalScrollBarVisibility="Visible">
+                <Canvas x:Name="imgMap" Margin="0" MouseMove="imgMap_MouseMove" MouseLeave="imgMap_MouseLeave" MouseDown="imgMap_MouseDown" MouseEnter="imgMap_MouseEnter" />
             </ScrollViewer>
         </GroupBox>
         <Label x:Name="pointer" Content="X: 0; Y: 0" HorizontalAlignment="Right" Margin="458,55,0,0" VerticalAlignment="Top" Width="100"/>
+        
+
+
 
 
 

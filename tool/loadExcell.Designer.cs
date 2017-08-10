@@ -37,6 +37,10 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lFileName = new System.Windows.Forms.Label();
+            this.txtLong = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtLa = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -83,13 +87,13 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(34, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Number col:";
+            this.label3.Text = "Name col:";
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(56, 168);
+            this.btnOK.Location = new System.Drawing.Point(50, 229);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 6;
@@ -100,7 +104,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(177, 168);
+            this.btnCancel.Location = new System.Drawing.Point(171, 229);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 7;
@@ -116,13 +120,49 @@
             this.lFileName.TabIndex = 8;
             this.lFileName.Text = "filename";
             // 
+            // txtLong
+            // 
+            this.txtLong.Location = new System.Drawing.Point(103, 155);
+            this.txtLong.Name = "txtLong";
+            this.txtLong.Size = new System.Drawing.Size(169, 20);
+            this.txtLong.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(34, 158);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Long col:";
+            // 
+            // txtLa
+            // 
+            this.txtLa.Location = new System.Drawing.Point(103, 189);
+            this.txtLa.Name = "txtLa";
+            this.txtLa.Size = new System.Drawing.Size(169, 20);
+            this.txtLa.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(34, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "La col:";
+            // 
             // loadExcell
             // 
             this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(284, 203);
+            this.ClientSize = new System.Drawing.Size(284, 312);
+            this.Controls.Add(this.txtLa);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtLong);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lFileName);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
@@ -154,5 +194,9 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lFileName;
+        private System.Windows.Forms.TextBox txtLong;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtLa;
+        private System.Windows.Forms.Label label5;
     }
 }

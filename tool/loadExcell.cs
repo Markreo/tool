@@ -16,6 +16,8 @@ namespace tool
         public string _sheet = "0";
         public string _type = "B";
         public string _number = "C";
+        public string _la;
+        public string _long;
 
         public loadExcell(string fileName = "")
         {
@@ -26,8 +28,10 @@ namespace tool
                 Console.WriteLine(fileName);
                 _fileName = fileName;
                 txtSheet.Text = "2";
-                txtType.Text = "2";
-                txtNumber.Text = "3";
+                txtType.Text = "3";
+                txtNumber.Text = "2";
+                txtLong.Text = "4";
+                txtLa.Text = "5";
             }
         }
 
@@ -36,6 +40,8 @@ namespace tool
             _sheet = txtSheet.Text;
             _type = txtType.Text;
             _number = txtNumber.Text;
+            _la = txtLa.Text;
+            _long = txtLong.Text;
             this.DialogResult = DialogResult.OK;
         }
     }

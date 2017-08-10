@@ -14,3 +14,8 @@ C:\Users\giapn\Desktop\tool\tool\obj\Debug\tool.pdb
 C:\Users\giapn\Desktop\tool\tool\obj\Debug\tool.loadExcell.resources
 C:\Users\giapn\Desktop\tool\tool\obj\Debug\tool.csproj.ResolveComReference.cache
 C:\Users\giapn\Desktop\tool\tool\obj\Debug\tool.csprojResolveAssemblyReference.cache
+C:\Users\giapn\Desktop\tool\tool\obj\Debug\tool.Input.resources
+C:\Users\giapn\Desktop\tool\tool\bin\Debug\tool.exe.manifest
+C:\Users\giapn\Desktop\tool\tool\bin\Debug\tool.application
+C:\Users\giapn\Desktop\tool\tool\obj\Debug\tool.exe.manifest
+C:\Users\giapn\Desktop\tool\tool\obj\Debug\tool.application
